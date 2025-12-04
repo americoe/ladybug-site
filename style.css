@@ -1,16 +1,26 @@
 #ladybug {
-    /* Style to make it look like a ladybug, e.g., red circle with black spots */
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%; /* Makes it a circle */
-    position: absolute; /* Essential for movement */
+    /* Adjust width/height to match the size of your ladybug.png image */
+    width: 60px;
+    height: 60px;
+    
+    /* ------------------------------------- */
+    /* NEW: Use the local image file */
+    background-image: url('ladybug.png');
+    
+    /* These ensure the image fits perfectly and doesn't repeat */
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    
+    /* Remove or comment out the old styling */
+    /* background-color: red; */
+    /* border-radius: 50%; */
+    /* ------------------------------------- */
+
+    position: absolute; 
     left: 10%;
     top: 50%;
-    /* Define the simple animation */
     animation: crawl 4s infinite alternate; 
 }
-
 /* Defines how the 'crawl' animation works */
 @keyframes crawl {
     0%   { transform: translateX(0); } /* Starting position */
